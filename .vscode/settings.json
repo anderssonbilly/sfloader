@@ -1,0 +1,24 @@
+{
+    "[c]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    "files.associations": {
+        "stdio.h": "c",
+        "windows.h": "c",
+        "cstdio": "c",
+        "cstdlib": "c",
+        "cstring": "c",
+        "main.h": "c",
+        "string.h": "c",
+        "awe_dll.h": "c",
+        "cstdarg": "c",
+        "stdarg.h": "c",
+        "windef.h": "c",
+        "stdbool.h": "c",
+        "AWE_DLL.H": "cpp",
+        "stdlib.h": "c",
+        "printv.h": "c"
+    }
+}

@@ -1,0 +1,15 @@
+# Compiled Source #
+###################
+*.obj
+*.exe
+
+# 3d Party Sources #
+####################
+AWE_API.H
+AWE_DLL.H
+ERRORMSG.H
+INDICES.H
+
+# Misc #
+########
+*.err
