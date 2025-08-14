@@ -2,14 +2,16 @@
 ###################
 *.obj
 *.exe
+*.dll
 
-# 3d Party Sources #
-####################
-AWE_API.H
-AWE_DLL.H
-ERRORMSG.H
-INDICES.H
+# Build #
+#########
+build/bin/mocks/
+build/logs/
+build/obj/
 
 # Misc #
 ########
 *.err
+*.log
+test/poc/

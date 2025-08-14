@@ -1,10 +1,10 @@
 {
     "configurations": [
-
         {
             "name": "DOS16",
             "includePath": [
                 "${workspaceFolder}/src/**",
+                "${workspaceFolder}/include/**",
                 "c:/watcom/h/**"
             ],
             "defines": [
@@ -13,7 +13,7 @@
                 "_UNICODE",
                 "_M_I86",
                 "far="
-            ],            
+            ],
             "cStandard": "c89",
             "cppStandard": "c++98",
             "intelliSenseMode": "msvc-x86"
@@ -22,12 +22,13 @@
             "name": "DOS32",
             "includePath": [
                 "${workspaceFolder}/src/**",
+                "${workspaceFolder}/include/**",
                 "c:/watcom/h/**"
-            ],            
+            ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "_UNICODE"                
+                "_UNICODE"
             ],
             "cStandard": "c89",
             "cppStandard": "c++98",

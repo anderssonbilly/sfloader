@@ -1,4 +1,4 @@
-#include "h/main.h"
+#include "main.h"
 
 char const* const SETTINGS = "settings.cfg";
 char const* const REGISTRY_PATH_KEY = "register_path";
@@ -129,11 +129,24 @@ void help(){
 BOOL initAWEMAN(){
     printv("Init AWEMAN...\n");
 	hAWEMANDLL = LoadLibrary("AWEMAN32.DLL");
+
+    if (hAWEMANDLL == NULL) {
+        printv("AWEMAN init failed\n"
+            "LoadLibrary(\"AWEMAN32.DLL\") returned NULL.\n");
+        printv("Windows System Error Code: %lu\n", GetLastError());
+		return FALSE;
+	} else {
+        printv("LoadLibrary found and loaded AWEMAN32.DLL successfully.\n");
+    }
+
 	lpAWEManager = (LPFNAWEMANAGER)GetProcAddress(hAWEMANDLL, "AWEManager");
 
 	if( lpAWEManager == NULL ){
         printv("AWEMAN init failed\n"
-            "AWEMAN32.DLL load failed\n");
+            "AWEMAN32.DLL load failed\n"
+            "GetProcAddress could not find the 'AWEManager' function in the DLL.\n");
+        printv("Windows System Error Code: %lu\n", GetLastError());
+		FreeLibrary(hAWEMANDLL);
 		return FALSE;
 	} else{
         printv("AWEMAN32.DLL loaded successfully\n");
